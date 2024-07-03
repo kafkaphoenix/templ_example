@@ -1,0 +1,22 @@
+version: '3'
+
+# env:
+#   BUILD_DIR: ./build
+
+dotenv: [".env"]
+
+tasks:
+  generate:
+    cmds:
+      - templ generate
+    desc: "Compile templ components"
+
+  build:
+    cmds:
+      - go build -o $BUILD_DIR .
+    desc: "Compile binary"
+
+  run:
+    cmds:
+      - go run .
+    desc: "Run the server"
