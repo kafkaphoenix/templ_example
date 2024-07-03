@@ -9,3 +9,12 @@ templ timeComponent(d time.Time) {
 templ notFoundComponent() {
 	<div>404 - Not found</div>
 }
+
+var greeting = "Welcome!"
+
+templ helloComponent(name string) {
+  <div>
+    <h1>{ name }</h1>
+    <h2>"{ greeting }"</h2>
+  </div>
+}
